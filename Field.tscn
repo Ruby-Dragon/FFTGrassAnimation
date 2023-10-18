@@ -1,0 +1,26 @@
+[gd_scene load_steps=5 format=3 uid="uid://42qevtcavpbi"]
+
+[ext_resource type="Script" path="res://Field.cs" id="1_77vol"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_nglaa"]
+albedo_color = Color(0, 0.439216, 0.0235294, 1)
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_bsneh"]
+material = SubResource("StandardMaterial3D_nglaa")
+size = Vector2(50, 50)
+
+[sub_resource type="BoxMesh" id="BoxMesh_y8g7g"]
+
+[node name="Node3D" type="Node3D"]
+
+[node name="Field" type="MeshInstance3D" parent="."]
+mesh = SubResource("PlaneMesh_bsneh")
+script = ExtResource("1_77vol")
+
+[node name="Camera" type="Camera3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 25)
+current = true
+
+[node name="HumanEquivalentCube" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 2, 0, 0, 0, 1, 0, 1, 15)
+mesh = SubResource("BoxMesh_y8g7g")
