@@ -1,0 +1,14 @@
+[remap]
+
+importer="glsl"
+type="RDShaderFile"
+uid="uid://ld1p1yvsw2um"
+path="res://.godot/imported/WindStrengthComputeShader.glsl-2b14b937bc19df7e60534781ed6fd60a.res"
+
+[deps]
+
+source_file="res://WindStrengthComputeShader.glsl"
+dest_files=["res://.godot/imported/WindStrengthComputeShader.glsl-2b14b937bc19df7e60534781ed6fd60a.res"]
+
+[params]
+
