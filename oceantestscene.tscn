@@ -1,0 +1,37 @@
+[gd_scene load_steps=7 format=3 uid="uid://b1wkkgh6c70gm"]
+
+[ext_resource type="Script" path="res://addons/tessarakkt.oceanfft/components/Ocean3D.gd" id="1_kou3p"]
+[ext_resource type="Script" path="res://addons/tessarakkt.oceanfft/components/QuadTree3D.gd" id="3_8mewh"]
+[ext_resource type="Material" uid="uid://cmyo0unntq078" path="res://addons/tessarakkt.oceanfft/Ocean.tres" id="3_574q1"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_5p67c"]
+sky_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
+ground_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
+
+[sub_resource type="Sky" id="Sky_w0fbk"]
+sky_material = SubResource("ProceduralSkyMaterial_5p67c")
+
+[sub_resource type="Environment" id="Environment_ienw0"]
+background_mode = 2
+sky = SubResource("Sky_w0fbk")
+tonemap_mode = 2
+glow_enabled = true
+
+[node name="Node3D" type="Node3D"]
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(-0.866023, -0.433016, 0.250001, 0, 0.499998, 0.866027, -0.500003, 0.749999, -0.43301, 0, 0, 0)
+shadow_enabled = true
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_ienw0")
+
+[node name="Ocean3D" type="Node3D" parent="."]
+script = ExtResource("1_kou3p")
+
+[node name="QuadTree3D" type="Node3D" parent="."]
+script = ExtResource("3_8mewh")
+material = ExtResource("3_574q1")
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.923063, 0.38465, 0, -0.38465, 0.923063, 0, 31.9167, 271.101)

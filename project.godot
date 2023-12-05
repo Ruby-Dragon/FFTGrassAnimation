@@ -12,9 +12,13 @@ config_version=5
 
 config/name="FFTGrassAnimation"
 run/main_scene="res://Field.tscn"
-config/features=PackedStringArray("4.1", "C#", "Forward Plus")
+config/features=PackedStringArray("4.2", "C#", "Forward Plus")
 config/icon="res://icon.svg"
 
 [dotnet]
 
 project/assembly_name="FFTGrassAnimation"
+
+[editor_plugins]
+
+enabled=PackedStringArray("res://addons/tessarakkt.oceanfft/plugin.cfg")
