@@ -9,16 +9,16 @@ varying float Wind;
 void vertex() {
 	vec3 WorldPos = (MODEL_MATRIX * vec4(VERTEX, 1.0)).xyz;
 	
-	vec2 WorldUV = TIME + WorldPos.xz;
+	vec2 WorldUV = TIME * 6.0 + WorldPos.xz;
 	
 	//Direction of wind movement
-	vec2 Direction = normalize(vec2(cos((Angle * 180.0) / PI), sin((Angle * 180.0) / PI)));
+	vec2 Direction = normalize(vec2(cos(Angle), sin(Angle)));
 	
-	float WindMovement = pow(VERTEX.y, 2) * (sin((WorldUV.x + WorldUV.y) * 0.3) + 1.0) * 0.1;
+	float WindMovement = pow(VERTEX.y, 2) * (sin((WorldUV.x * Direction.x + WorldUV.y * Direction.y) * 0.3) + 1.0) * 0.1;
 	
 	Wind = WindMovement;
 	
-	VERTEX.xz += WindMovement * Direction;
+	VERTEX.xz += (WindMovement) * -Direction;
 	//VERTEX.y -= WindMovement / (Direction.x + Direction.y);
 	
 	//VERTEX.x += sin((WorldPos.x + WorldPos.z) + TIME) * pow(WorldPos.y, 2) ;
