@@ -1,8 +1,8 @@
 [gd_resource type="ArrayMesh" load_steps=3 format=3 uid="uid://m1cltvuv50c2"]
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_lwit2"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_4qoht"]
 
-[sub_resource type="ArrayMesh" id="ArrayMesh_dxh8f"]
+[sub_resource type="ArrayMesh" id="ArrayMesh_tqtyf"]
 _surfaces = [{
 "aabb": AABB(0, -1, -0.254847, 1e-05, 5.49479, 0.509695),
 "format": 34896613377,
@@ -23,11 +23,11 @@ _surfaces = [{
 "format": 34896613399,
 "index_count": 15,
 "index_data": PackedByteArray(0, 0, 3, 0, 1, 0, 0, 0, 2, 0, 3, 0, 0, 0, 5, 0, 2, 0, 0, 0, 4, 0, 5, 0, 4, 0, 6, 0, 5, 0),
-"material": SubResource("StandardMaterial3D_lwit2"),
+"material": SubResource("StandardMaterial3D_4qoht"),
 "primitive": 3,
 "uv_scale": Vector4(0, 0, 0, 0),
 "vertex_count": 7,
 "vertex_data": PackedByteArray(0, 0, 212, 68, 215, 240, 255, 191, 0, 0, 0, 0, 255, 255, 255, 191, 0, 0, 212, 68, 39, 15, 255, 191, 0, 0, 0, 0, 0, 0, 255, 191, 0, 0, 83, 156, 135, 208, 255, 191, 0, 0, 83, 156, 119, 47, 255, 191, 0, 0, 255, 255, 255, 127, 255, 191, 255, 127, 0, 0, 255, 127, 0, 0, 255, 127, 0, 0, 255, 127, 0, 0, 255, 127, 0, 0, 255, 127, 0, 0, 255, 127, 0, 0)
 }]
 blend_shape_mode = 0
-shadow_mesh = SubResource("ArrayMesh_dxh8f")
+shadow_mesh = SubResource("ArrayMesh_tqtyf")
