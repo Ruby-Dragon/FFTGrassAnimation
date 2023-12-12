@@ -15,6 +15,12 @@ run/main_scene="res://Field.tscn"
 config/features=PackedStringArray("4.2", "C#", "Forward Plus")
 config/icon="res://icon.svg"
 
+[display]
+
+window/size/viewport_width=1920
+window/size/viewport_height=1080
+window/size/mode=4
+
 [dotnet]
 
 project/assembly_name="FFTGrassAnimation"
@@ -22,7 +28,3 @@ project/assembly_name="FFTGrassAnimation"
 [editor_plugins]
 
 enabled=PackedStringArray("res://addons/tessarakkt.oceanfft/plugin.cfg")
-
-[rendering]
-
-anti_aliasing/quality/msaa_3d=1
